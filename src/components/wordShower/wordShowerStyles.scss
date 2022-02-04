@@ -1,0 +1,49 @@
+/*** VARIABLES ***/
+/* Colors */
+$black: #1d1f20;
+$blue: #83e4e2;
+$green: #a2ed56;
+$yellow: #fddc32;
+$white: #fafafa;
+
+/*** EXTEND ***/
+/* box-shadow */
+%boxshadow {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+/*** STYLE ***/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.resultArea {
+  flex-direction: column;
+ display: flex  ;
+ width: 100%;
+ justify-content: center;
+h2{
+  margin: auto;
+}
+  ul {
+    list-style: none;
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 0px;
+    align-content: space-around;
+    li {
+      width: 45%;
+      background: white;
+      margin: 4% auto 4% auto;
+      border-radius: 5px;
+      padding: 20px;
+      color: #333;
+    }
+  }
+}
+
+// ol style by : https://codepen.io/erinesullivan/pen/qGrdGV

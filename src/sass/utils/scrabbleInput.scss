@@ -1,0 +1,37 @@
+@import '../base/colors.scss';
+
+
+@for $i from 1 to 30 {
+    $char-w: 1ch;
+    // $char-wch:1ch;
+    $gap: 0.5 * $char-w;
+    //   $gapch:$gap&ch;
+    $n-char: #{$i};
+    $intermediate: $char-w + $gap;
+    $in-w: calc($n-char * $intermediate);
+    //   $in-wch:$in-w&ch;
+
+    #scrabbleInput#{$i} {
+        display: block;
+        margin: 2em auto;
+        border: none;
+        padding: 0;
+        width: $in-w;
+        background: repeating-linear-gradient(90deg, 
+            $Driftwood 0, $Driftwood $char-w, 
+            transparent 0, transparent calc($char-w + $gap) )
+            0 100%/ #{calc($in-w - $gap)} 2px no-repeat;
+        font: 5ch droid sans mono, consolas, monospace;
+        letter-spacing: $gap;
+        
+        &:focus {
+            outline: none;
+            color: $titleText;
+        }
+    }
+}
+
+
+/*** FONTS ***/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:900|Raleway:400,400i,700,700i);
+
